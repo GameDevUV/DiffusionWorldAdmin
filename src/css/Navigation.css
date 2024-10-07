@@ -1,0 +1,195 @@
+.navbar {
+    background-color: white;
+    padding-top: 0.5rem;
+}
+.top {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid;
+    padding-bottom: 0.5rem;
+}
+
+.Span1 {
+
+    color: #6d6363;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.Span2 {
+    color: rgb(225 83 255);
+
+    font-weight: 900;
+    font-size: x-large;
+}
+
+ul.Nav-ul {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+
+li.nav-li {
+    list-style-type: none;
+    margin-left: 1rem;
+    cursor: pointer;
+    font-size: large;
+    font-family: sans-serif;
+    word-wrap: break-word;
+}
+
+.active{
+    color: red;
+}
+
+
+/* Hambergur preset */
+.Hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.ham {
+    background-color: black;
+    height: 5px;
+    width: 40px;
+    display: block;
+    margin-top: 1px;
+    border-radius: 5rem;
+}
+
+/* bottom navigation */
+.SocialMediaAndContact {
+    border-bottom: 1px solid;
+    padding-bottom: 0.4rem;
+}
+
+ul.Social-ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5rem;
+    font-size: medium;
+}
+
+li {
+    list-style-type: none;
+}
+
+.social-li {
+    cursor: pointer;
+}
+
+/* Animaton */
+
+@keyframes Ham1{
+    100%{
+        
+        transform: rotate(45deg);
+    }
+}
+@keyframes Ham2{
+    100%{
+   
+        transform: rotate(-45deg);
+    }
+}
+@keyframes slidePlus{
+    100%{
+       height: 5rem;
+    }
+}
+@keyframes slideMinus{
+    100%{
+       height: 0rem;
+    }
+}
+
+
+.ham-ani-left {
+    background-color: black;
+    height: 6px;
+    width: 50px;
+    display: block;
+    margin-right: 5px;
+    margin-top: 2px;
+    border-radius: 5rem;
+    animation: Ham1 1s;
+    animation-fill-mode: forwards;
+    background-color: black;
+}
+.hamNone{
+    display: none;
+}
+.ham-ani-right {
+    background-color: black;
+    height: 5px;
+    width: 45px;
+    display: block;
+    margin-left: 5px;
+    margin-top: 1px;
+    border-radius: 5rem;
+    animation: Ham2 1s;
+    animation-fill-mode: forwards;
+    margin-top: 6px;
+    background-color: black;
+}
+.menu-slid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    height: 5rem;
+    overflow: hidden;
+}
+.menu-slid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid;
+    cursor: pointer;
+}
+ul.ham-slide-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+li.ham-slide-li {
+    margin-top: 0.2rem;
+}
+#SlideAnimation{
+animation: slidePlus 1s;
+animation-fill-mode: forwards;
+overflow: hidden;
+}
+#SlideAnimation2{
+animation: slideMinus 1s;
+animation-fill-mode: forwards;
+overflow: hidden;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+/* Responsive */
+
+@media screen and (max-width: 530px) {
+    .top {
+        display: flex;
+        justify-content: space-around;
+        border-bottom: 1px solid;
+        padding-bottom: 7px;
+    }
+
+    .navPart {
+        display: none;
+    }
+
+    .Hamburger {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+    }
+}

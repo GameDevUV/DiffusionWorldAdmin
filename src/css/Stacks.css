@@ -1,0 +1,23 @@
+.Filter-stack {
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+    border-bottom: 1px solid;
+}
+li.filter-li {
+    margin: 6px;
+    font-size: larger;
+    cursor: pointer;
+}
+.stack-card {
+    cursor: pointer;
+    border: 1px solid;
+    width: 85%;
+    border-radius: 4px;
+}
+.card-image {
+    width: 100%;
+}
+img.image-card-stack {
+    width: 100%;
+}
