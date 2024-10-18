@@ -12,7 +12,8 @@ const Home = () => {
     DeviceKnown: '',
     WallTags: '',
     WallTitle: '',
-    btags: ''
+    btags: '',
+    Desc: ''
   });
 
   const handleChange = (event) => {
@@ -35,6 +36,7 @@ const Home = () => {
     data.append('WallTags', formData.WallTags);
     data.append('WallTitle', formData.WallTitle);
     data.append('btags', formData.btags);
+    data.append('Desc', formData.Desc );
 
     axios.post(api , data, {
       headers: {
@@ -60,9 +62,9 @@ const Home = () => {
                   <input type="file" name="image" id="File" onChange={handleChange} className="drag-images" />
                 </div>
                 <div className="left-form">
-                  <label htmlFor="WallTitle">Category Title</label>
+                  <label htmlFor="WallTitle">Category Title || Main Title</label>
                   <input type="text" name="WallTitle" id="MainTitle" onChange={handleChange} className="name-input" />
-                  <label htmlFor="WallTags">Category Main Tags</label>
+                  <label htmlFor="WallTags">Category || Main Tags</label>
                   <input type="text" name="WallTags" id="MainTags" onChange={handleChange} className="name-input" />
                   <label htmlFor="imageName">Image Title</label>
                   <input type="text" name="imageName" id="ImageTitle" onChange={handleChange} className="name-input" />
@@ -70,6 +72,8 @@ const Home = () => {
                   <input type="text" name="btags" id="ImageTag" onChange={handleChange} className="name-input" />
                   <label htmlFor="DeviceKnown">Device</label>
                   <input type="text" name="DeviceKnown" id="Device" onChange={handleChange} className="name-input" />
+                  <label htmlFor="description-">Description</label>
+                  <input type="text" name='description-' id='Desc' onChange={handleChange} className='name-input' />
                   <div className="submit-div">
                     <input type="submit" className="input-submit-button" />
                   </div>
