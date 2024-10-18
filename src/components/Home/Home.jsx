@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import '../../css/Home.css';
 
+
+
+let api = process.env.REACT_APP_DATA_API;
 const Home = () => {
   const [formData, setFormData] = useState({
     image: null,
@@ -33,7 +36,7 @@ const Home = () => {
     data.append('WallTitle', formData.WallTitle);
     data.append('btags', formData.btags);
 
-    axios.post('http://localhost:4200/uploadrt', data, {
+    axios.post(api , data, {
       headers: {
         'Content-Type': 'multipart/form-data'
       }
